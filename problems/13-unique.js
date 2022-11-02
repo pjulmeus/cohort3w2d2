@@ -15,13 +15,20 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 */
 
 let unique = function(array) {
-    // Your code here
-};
+let newWord = [];
+    array.forEach((num)=>{
+        if(num.lastIndexOf(newWord)){
+             newWord.push(num);
+        }
 
+    })
+   return newWord;
+};
+console.log(unique(['a', 'b', 'c', 'b']));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
     module.exports = unique;
 } catch (e) {
     module.exports = null;
-}
+}
